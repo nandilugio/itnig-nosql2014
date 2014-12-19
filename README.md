@@ -1,13 +1,22 @@
-TSDB section
-------------
+A couple of fellow developers here at Itnig and Camaloon went this November to the NoSQL Matters 2014 conference in Barcelona. It was a cool experience sharing with everyone there and seeing talks by some relevant personalities in the field.
 
-The conference started with Time Series Database talks. Ellen Friedman started the conference with her keynote ÎÎSeeing with your eyes closedÎÎ. This technology is not something new in fact, Ellen told us a bit about time series data ancient usage for logging wind, temperature and currents measures to help sailors for navigation.
+The conference started with a couple of Time Series Databases related talks. Ellen Friedman started the conference with her keynote "Seeing with your eyes closed", where she brought us back to the 1800s when Matthew Fountain Maury carried out an analysis of timestamped measurements logged by sailors that produced accurate wind and current charts, in what she referred as the precursor of what nowadays we call Big Data.
 
-Ted Dunning followed with his talk ÎÎVery High Bandwidth Time Series Database ImplementationÎÎ and introduced OpenTSDB: a scalable, distributed Time Series Database. The Internet is changing and ,as an example, our mobile devices have a lot of sensors which are storing lots of data over the time. We need specialized systems to handle this amount of data and NoSQL databases have a lot of terrain to explore and improve.
+Ted Dunning followed with his talk "Very High Bandwidth Time Series Database Implementation", introducing OpenTSDB and MapR technologies, regarding scalable, distributed Time Series Databases. Internet and mobile devices have plenty of sensors, and those are being used to log vast amounts of timestamped data. The need for specialized systems able to handle this kind of data extends to more and more projects and organizations, and NoSQL databases have a lot of terrain to explore and improve there.
 
-Quick highlights
-----------------
+Another interesting talk was the one given by Simon Elliston Ball, "When to NoSQL and When to Know SQL". He went on not only through the typical review and classification of the NoSQL technologies available, but he leveraged their strengths and weaknesses compared to good old SQL RDBMS. The results where not always those expected by some.
 
-As a quick highlights, after two years Riak 2.0 is out with a new search engine. Now, this key-value database is more interesting than ever, powered with a full distributed search combined with Solr.
-Building a Startup with NoSQL seems to be totally possible but we must focus on picking the right tool for the job. Testing different alternatives is useful but we must think agile and be pragmatic.
-When talking about Big Data you must be aware you are going to handle a huge amount of data. If you are using python take a look at pandas.DataFrame.
+NoSQL databases are driven by different constraints than the ones that pushed SQL to the high reliability standards offered by ACID compliance. Instead, BASE (Basically Available, Soft state and Eventual consistency) compliance embraced by NoSQL allows compromises that make scalability and performance easier.
+
+Nonetheless, on the days of Rapid Application Design, Machine Learning, Polyglot Persistence solutions for Big Data problems and other Social Internet driven sorcery, "non-Facebook" scale enterprises ask themselves what they really need. Even though we're giving radically different uses to persistence than years ago, Big Data is not a problem everybody has. Frequently restructuring your model isn't everybody's case either, or not all the model at least.
+
+There is a growing need for more broader solutions that can cover nowadays OLTP needs that often offer aggregated data as a value to the user, and that serves as a base for the analyses needed to drive the business in the right direction at the right time. Both SQL and NoSQL are merging features and ideas from each other that could be used to address those needs without the complexities associated to maintaining different technologies running in conjunction. More words for the soup: NewSQL emerges from the mist... or cloud?
+
+The fact is that many of the NoSQL solutions, before very specific by design, now incorporate hybrid designs that mix graph structures, documents, eventual consistency and other typical NoSQL features with more flexible query languages. Think about ArangoDB, GraphDB or the Aggregation Framework of MongoDB. Also the big SQL vendors are incorporating NoSQL ideas that can broaden their application, like PostgreSQL with the impressive JSONB implementation or their older arrays and hstores. Or the many columnar stores like Vertica or Amazon Redshift, specifically engineered for fast aggregation.
+
+Also, the different clients of the data in an organization need to access the data in different ways, imposing more challenges to the underlying persistence technology being used. More technologies bring different access paradigms on top of databases. Like ORMs let developers speak in object-oriented languages to RDBMS, projects like Apache Drill or Cloudera Impala implement SQL over data stores engineered for large map-reduce task, enabling fast querying and ad-hoc analysis over great amounts of data.
+
+Much of these technologies where discussed in the conference, making it clear that choosing the right tool for the job is not an easy task. And that's a major concern when creating a startup business. Testing different alternatives is always useful but we must think agile and be pragmatic.
+
+So that's the main reason we where there! to know a bit more about the state-of-the-art in persistence technologies. News like the upcoming release of the Redis Cluster first quarter of 2015 where great to hear. Also, Riak 2.0 is out integrating Solr, a full-text search engine, making this tool more interesting than ever.
+
